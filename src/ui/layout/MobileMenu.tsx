@@ -1,5 +1,5 @@
 import { navLinks } from "@/constants";
-import Button from "@/shared/Button";
+import Button from "@/ui/shared/Button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 

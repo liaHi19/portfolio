@@ -1,11 +1,11 @@
-import Button from "@/shared/Button";
+import Button from "@/ui/shared/Button";
 
 import MobileMenu from "./MobileMenu";
 import { navLinks } from "@/constants";
 
 function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 transition-all duration-500 bg-transparent py-5">
+    <header className="fixed top-0 left-0 right-0 transition-all duration-500 bg-transparent py-5 z-99">
       <nav className="container mx-auto px-6 flex items-center justify-between flex-wrap ">
         <a
           href="#"

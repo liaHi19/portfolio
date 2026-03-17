@@ -1,5 +1,5 @@
-import Header from "@/layout/Header";
-import Hero from "@/sections/Hero";
+import Header from "@/ui/layout/Header";
+import Hero from "@/ui/sections/Hero";
 
 function App() {
   return (
