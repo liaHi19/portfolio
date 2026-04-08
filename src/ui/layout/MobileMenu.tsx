@@ -35,6 +35,7 @@ function MobileMenu({
       <button
         className="md:hidden p-2 text-foreground cursor-pointer"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Mobile Menu Button"
       >
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>

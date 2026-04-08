@@ -116,7 +116,7 @@ function Hero() {
                 {socialLinks.map((social, idx) => (
                   <li
                     key={idx}
-                    className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                    className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300 cursor-pointer"
                   >
                     <a
                       href={social.href}
@@ -193,11 +193,11 @@ function Hero() {
 
       <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
+      animate-fade-in animation-delay-800 z-10"
       >
         <a
           href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group cursor-pointer"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="size-6 animate-bounce" />
