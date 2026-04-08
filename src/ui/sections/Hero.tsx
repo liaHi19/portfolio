@@ -3,10 +3,15 @@ import Button from "../shared/Button";
 import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/liaHi19" },
+  {
+    icon: Github,
+    href: "https://github.com/liaHi19",
+    label: "Personal github account - Nataliia Hirniak",
+  },
   {
     icon: Linkedin,
     href: "https://www.linkedin.com/in/nataliia-hirniak-075537255/",
+    label: "Personal LinkedIn account - Nataliia Hirniak",
   },
 ];
 
@@ -106,7 +111,11 @@ function Hero() {
                     key={idx}
                     className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                   >
-                    <a href={social.href} target="_blank">
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      aria-label={social.label}
+                    >
                       {<social.icon className="size-5" />}
                     </a>
                   </li>
