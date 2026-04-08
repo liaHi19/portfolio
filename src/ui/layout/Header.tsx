@@ -2,11 +2,33 @@ import Button from "@/ui/shared/Button";
 
 import MobileMenu from "./MobileMenu";
 import { navLinks } from "@/constants";
+import { useEffect, useState } from "react";
+import { cn } from "@/libs/utils";
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 transition-all duration-500 bg-transparent py-5 z-99">
-      <nav className="container mx-auto px-6 flex items-center justify-between flex-wrap ">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 transition-colors duration-500 z-99",
+        isScrolled || isMobileMenuOpen
+          ? "glass-strong py-3 border-none"
+          : "bg-transparent py-5",
+      )}
+    >
+      <nav className="container mx-auto px-6 flex items-center justify-between flex-wrap">
         <a
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary flex gap-1 items-center"
@@ -34,7 +56,10 @@ function Header() {
             contact me
           </Button>
         </div>
-        <MobileMenu />
+        <MobileMenu
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+        />
       </nav>
     </header>
   );
