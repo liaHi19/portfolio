@@ -1,5 +1,6 @@
 import Header from "@/ui/layout/Header";
 import Hero from "@/ui/sections/Hero";
+import About from "@/ui/sections/About";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
       </main>
     </div>
   );
