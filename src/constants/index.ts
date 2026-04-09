@@ -25,3 +25,31 @@ export const skills = [
   "Jest",
   "React Testing Library",
 ];
+
+export const projects = [
+  {
+    title: "E-commerce Shopping Platform",
+
+    description:
+      "A full-featured e-commerce platform with authentication, payments, admin tools, reviews, and email receipts.",
+    image: "/projects/prostore.webp",
+    imageSrc: [],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Next Auth",
+      "PayPal",
+      "Stripe",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Jest",
+    ],
+    link: "https://prostore-beta-five.vercel.app/",
+    labelLink: "Visit Prostore Shopping Platform",
+    github: "https://github.com/liaHi19/prostore",
+    labelGithub: "Visit Project Prostore on Github",
+  },
+];

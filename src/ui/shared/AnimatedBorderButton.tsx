@@ -1,6 +1,12 @@
 import type { ReactNode } from "react";
 
-export const AnimatedBorderButton = ({ children }: { children: ReactNode }) => {
+export const AnimatedBorderButton = ({
+  children,
+  onClick,
+}: {
+  children: ReactNode;
+  onClick?: () => void;
+}) => {
   return (
     <button
       className="relative bg-transparent border border-border 
@@ -10,6 +16,7 @@ export const AnimatedBorderButton = ({ children }: { children: ReactNode }) => {
         disabled:opacity-50 disabled:cursor-not-allowed group 
         px-8 py-4 text-lg font-medium rounded-full overflow-visible 
         animated-border"
+      onClick={onClick}
     >
       {/* Animated SVG Border */}
       <svg
