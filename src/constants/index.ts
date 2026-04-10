@@ -54,6 +54,27 @@ export const projects = [
   },
 ];
 
+export const experiences = [
+  {
+    period: "2023 — Present",
+    role: "Frontend Developer",
+    company: "N-and Group",
+    description:
+      "Built and maintained React and Next.js applications for enterprise clients.",
+    technologies: ["React", "TypeScript", "Next.js", "REST API"],
+    isCurrent: true,
+  },
+  {
+    period: "2022 — 2022",
+    role: "React Developer",
+    company: "InvertorSoft",
+    description:
+      "Delivered custom web solutions for small businesses, managing everything from design to deployment.",
+    technologies: ["React", "Redux", "Firebase"],
+    isCurrent: false,
+  },
+];
+
 export const heroImgSrc = [
   { src: "/hero/hero-bg-1774w.webp", width: 1774 },
   { src: "/hero/hero-bg-1996w.webp", width: 1996 },
