@@ -1,27 +1,10 @@
-import {
-  ArrowRight,
-  ChevronDown,
-  Download,
-  Github,
-  Linkedin,
-} from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
+import * as Icons from "lucide-react";
+
 import Button from "../shared/Button";
 import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
-import { heroImgSrc, skills } from "@/constants";
+import { heroImgSrc, skills, socialLinks } from "@/constants";
 import { buildSrcSet } from "@/libs/utils";
-
-const socialLinks = [
-  {
-    icon: Github,
-    href: "https://github.com/liaHi19",
-    label: "Personal github account - Nataliia Hirniak",
-  },
-  {
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/nataliia-hirniak-075537255/",
-    label: "Personal LinkedIn account - Nataliia Hirniak",
-  },
-];
 
 const moveLeft = () => {
   return Math.random() * 100;
@@ -109,20 +92,23 @@ function Hero() {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               <ul className="flex items-center gap-4">
-                {socialLinks.map((social, idx) => (
-                  <li
-                    key={idx}
-                    className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300 cursor-pointer"
-                  >
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      aria-label={social.label}
+                {socialLinks.map((social, idx) => {
+                  const Icon = Icons[social.icon];
+                  return (
+                    <li
+                      key={idx}
+                      className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300 cursor-pointer"
                     >
-                      {<social.icon className="size-5" />}
-                    </a>
-                  </li>
-                ))}
+                      <a
+                        href={social.href}
+                        target="_blank"
+                        aria-label={social.label}
+                      >
+                        {<Icon className="size-5" />}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

@@ -2,7 +2,8 @@ import Header from "@/ui/layout/Header";
 import Hero from "@/ui/sections/Hero";
 import About from "@/ui/sections/About";
 import Projects from "@/ui/sections/Projects";
-import Experience from "./ui/sections/Experience";
+import Experience from "@/ui/sections/Experience";
+import { Footer } from "@/ui/layout/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Projects />
         <Experience />
       </main>
+      <Footer />
     </div>
   );
 }

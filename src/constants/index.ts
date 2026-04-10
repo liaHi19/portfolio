@@ -1,3 +1,5 @@
+import type { icons } from "lucide-react";
+
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
@@ -72,6 +74,20 @@ export const experiences = [
       "Delivered custom web solutions for small businesses, managing everything from design to deployment.",
     technologies: ["React", "Redux", "Firebase"],
     isCurrent: false,
+  },
+];
+export type IconName = keyof typeof icons;
+
+export const socialLinks: { label: string; href: string; icon: IconName }[] = [
+  {
+    icon: "Github",
+    href: "https://github.com/liaHi19",
+    label: "Personal github account - Nataliia Hirniak",
+  },
+  {
+    icon: "Linkedin",
+    href: "https://www.linkedin.com/in/nataliia-hirniak-075537255/",
+    label: "Personal LinkedIn account - Nataliia Hirniak",
   },
 ];
 
