@@ -7,3 +7,8 @@ export type ButtonProps = {
   size?: Size;
   children: React.ReactNode;
 } & ComponentProps<"button">;
+
+export type ImageSrc = {
+  src: string;
+  width: number;
+};

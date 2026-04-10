@@ -53,3 +53,12 @@ export const projects = [
     labelGithub: "Visit Project Prostore on Github",
   },
 ];
+
+export const heroImgSrc = [
+  { src: "/hero/hero-bg-1774w.webp", width: 1774 },
+  { src: "/hero/hero-bg-1996w.webp", width: 1996 },
+  { src: "/hero/hero-bg-2466w.webp", width: 2466 },
+  { src: "/hero/hero-bg-2660w.webp", width: 2660 },
+  { src: "/hero/hero-bg-3548w.webp", width: 3548 },
+  { src: "/hero/hero-bg-3697w.webp", width: 3697 },
+];

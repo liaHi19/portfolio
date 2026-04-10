@@ -7,7 +7,8 @@ import {
 } from "lucide-react";
 import Button from "../shared/Button";
 import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
-import { skills } from "@/constants";
+import { heroImgSrc, skills } from "@/constants";
+import { buildSrcSet } from "@/libs/utils";
 
 const socialLinks = [
   {
@@ -38,21 +39,16 @@ const delay = () => {
   return Math.random() * 5;
 };
 
+const heroSrcSet = buildSrcSet(heroImgSrc);
+
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/hero/hero-bg-2048x1152.webp"
-          srcSet="
-          /hero/hero-bg-300x169.webp   300w,
-          /hero/hero-bg-721x406.webp   721w,
-          /hero/hero-bg-1083x609.webp 1083w,
-          /hero/hero-bg-1560x878.webp 1560w,
-          /hero/hero-bg-1920x1080.webp 1920w,
-          /hero/hero-bg-2048x1152.webp 2048w
-          "
-          sizes="(min-width: 1540px) 100.07vw, (min-width: 1040px) 1442px, 2334px"
+          src="/hero/hero-bg.webp"
+          srcSet={heroSrcSet}
+          sizes="(min-width: 1880px) 100.18vw, (min-width: 1040px) 1777px, 2662px"
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -141,16 +137,7 @@ function Hero() {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile/profile-photo-1950w-1614w.webp"
-                  srcSet="/profile/profile-photo-1950w-1614w.webp 1950w,
-                          /profile/profile-photo-1770w-1465w.webp 1770w,
-                          /profile/profile-photo-1570w-1299w.webp 1570w,
-                          /profile/profile-photo-1335w-1105w.webp 1335w,
-                          /profile/profile-photo-1150w-952w.webp  1150w,
-                          /profile/profile-photo-916w-758w.webp    916w,
-                          /profile/profile-photo-650w-538w.webp    650w,
-                          /profile/profile-photo-355w-294w.webp    355w"
-                  sizes="(min-width: 540px) 650px, calc(135vw - 51px)"
+                  src="/profile/profile.webp"
                   alt="Nataliia Hirniak"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
