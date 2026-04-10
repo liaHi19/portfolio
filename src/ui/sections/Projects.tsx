@@ -3,9 +3,12 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 import { useState } from "react";
 
+const LIMIT = 4;
+
 function Projects() {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projects : projects.slice(0, 4);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, LIMIT);
 
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
@@ -99,7 +102,7 @@ function Projects() {
         </div>
 
         {/* View All CTA */}
-        {projects.length > 4 && (
+        {projects.length > LIMIT && (
           <div className="text-center mt-12 animate-fade-in animation-delay-500">
             <AnimatedBorderButton onClick={() => setShowAll(!showAll)}>
               {!showAll ? "View All Projects" : "Hide All Projects"}
