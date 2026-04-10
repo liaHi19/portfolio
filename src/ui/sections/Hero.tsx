@@ -126,7 +126,7 @@ function Hero() {
               </ul>
             </div>
           </div>
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div

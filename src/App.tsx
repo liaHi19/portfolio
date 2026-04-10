@@ -1,7 +1,7 @@
 import Header from "@/ui/layout/Header";
 import Hero from "@/ui/sections/Hero";
 import About from "@/ui/sections/About";
-import Projects from "./ui/sections/Projects";
+import Projects from "@/ui/sections/Projects";
 
 function App() {
   return (
