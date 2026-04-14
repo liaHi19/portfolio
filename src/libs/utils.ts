@@ -6,5 +6,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const buildSrcSet = (images: ImageSrc[]) =>
-  images.map(({ src, width }) => `${src} ${width}w`).join(", ");
+export function buildSrcSet(images: ImageSrc[]) {
+  return images.map(({ src, width }) => `${src} ${width}w`).join(", ");
+}
+
+export function downloadFile(path: string, filename: string): void {
+  const link = document.createElement("a");
+  link.href = path;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}

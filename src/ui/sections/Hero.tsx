@@ -4,7 +4,7 @@ import * as Icons from "lucide-react";
 import Button from "../shared/Button";
 import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 import { heroImgSrc, skills, socialLinks } from "@/constants";
-import { buildSrcSet } from "@/libs/utils";
+import { buildSrcSet, downloadFile } from "@/libs/utils";
 
 const moveLeft = () => {
   return Math.random() * 100;
@@ -84,7 +84,11 @@ function Hero() {
               <Button as="a" href="#contact" size="lg">
                 Contact Me <ArrowRight className="size-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+                onClick={() =>
+                  downloadFile("/cv/cv.pdf", "Nataliia_Hirniak_CV.pdf")
+                }
+              >
                 <Download className="size-5" />
                 Download CV
               </AnimatedBorderButton>
