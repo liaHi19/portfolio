@@ -26,7 +26,11 @@ function MobileMenu({
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            <Button
+              as="a"
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Contact Me
             </Button>
           </li>

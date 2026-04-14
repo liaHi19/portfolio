@@ -52,7 +52,7 @@ function Header() {
         </ul>
 
         <div className="hidden md:block">
-          <Button size="sm" className="capitalize">
+          <Button as="a" href="#contact" size="sm" className="capitalize block">
             contact me
           </Button>
         </div>

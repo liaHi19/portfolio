@@ -81,7 +81,7 @@ function Hero() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+              <Button as="a" href="#contact" size="lg">
                 Contact Me <ArrowRight className="size-5" />
               </Button>
               <AnimatedBorderButton>
