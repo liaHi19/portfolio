@@ -1,4 +1,4 @@
-import type { icons } from "lucide-react";
+import type { Link, LinkValue } from "@/types";
 
 export const navLinks = [
   { href: "#about", label: "About" },
@@ -76,9 +76,8 @@ export const experiences = [
     isCurrent: false,
   },
 ];
-export type IconName = keyof typeof icons;
 
-export const socialLinks: { label: string; href: string; icon: IconName }[] = [
+export const socialLinks: Link[] = [
   {
     icon: "Github",
     href: "https://github.com/liaHi19",
@@ -91,6 +90,22 @@ export const socialLinks: { label: string; href: string; icon: IconName }[] = [
   },
 ];
 
+export const contactInfo: LinkValue[] = [
+  {
+    icon: "Mail",
+    label: "Email",
+    value: "gn.natalia19@gmail.com",
+    href: "mailto:gn.natalia19@gmail.com",
+  },
+
+  {
+    icon: "MapPin",
+    label: "Location",
+    value: "Bristol, UK",
+    href: "https://maps.app.goo.gl/M5rVCCviRGvieS8E8",
+  },
+];
+
 export const heroImgSrc = [
   { src: "/hero/hero-bg-1774w.webp", width: 1774 },
   { src: "/hero/hero-bg-1996w.webp", width: 1996 },
@@ -99,3 +114,5 @@ export const heroImgSrc = [
   { src: "/hero/hero-bg-3548w.webp", width: 3548 },
   { src: "/hero/hero-bg-3697w.webp", width: 3697 },
 ];
+
+export const ISAVAILABLE = false;

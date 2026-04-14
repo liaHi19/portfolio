@@ -4,6 +4,8 @@ import About from "@/ui/sections/About";
 import Projects from "@/ui/sections/Projects";
 import Experience from "@/ui/sections/Experience";
 import { Footer } from "@/ui/layout/Footer";
+import { Contact } from "@/ui/sections/Contact";
+import { Toaster } from "sonner";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <About />
         <Projects />
         <Experience />
+        <Contact />
       </main>
+      <Toaster richColors position="bottom-right" />
       <Footer />
     </div>
   );
