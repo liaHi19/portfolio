@@ -125,7 +125,7 @@ export const socialLinks: Link[] = [
   },
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/nataliia-hirniak-075537255/",
+    href: "https://www.linkedin.com/in/nataliia-hirniak",
     label: "Personal LinkedIn account - Nataliia Hirniak",
   },
 ];
