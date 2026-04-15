@@ -1,11 +1,15 @@
+import { lazy, Suspense } from "react";
 import Header from "@/ui/layout/Header";
 import Hero from "@/ui/sections/Hero";
-import About from "@/ui/sections/About";
-import Projects from "@/ui/sections/Projects";
-import Experience from "@/ui/sections/Experience";
-import { Footer } from "@/ui/layout/Footer";
-import { Contact } from "@/ui/sections/Contact";
+
+import Footer from "@/ui/layout/Footer";
+
 import { Toaster } from "sonner";
+
+const About = lazy(() => import("@/ui/sections/About"));
+const Projects = lazy(() => import("@/ui/sections/Projects"));
+const Experience = lazy(() => import("@/ui/sections/Experience"));
+const Contact = lazy(() => import("@/ui/sections/Contact"));
 
 function App() {
   return (
@@ -13,10 +17,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <Projects />
+          <Experience />
+          <Contact />
+        </Suspense>
       </main>
       <Toaster richColors position="bottom-right" />
       <Footer />
