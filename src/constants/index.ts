@@ -1,5 +1,7 @@
 import type { Link, LinkValue } from "@/types";
 
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
@@ -79,12 +81,12 @@ export const experiences = [
 
 export const socialLinks: Link[] = [
   {
-    icon: "Github",
+    icon: Github,
     href: "https://github.com/liaHi19",
     label: "Personal github account - Nataliia Hirniak",
   },
   {
-    icon: "Linkedin",
+    icon: Linkedin,
     href: "https://www.linkedin.com/in/nataliia-hirniak-075537255/",
     label: "Personal LinkedIn account - Nataliia Hirniak",
   },
@@ -92,19 +94,19 @@ export const socialLinks: Link[] = [
 
 export const contactInfo: LinkValue[] = [
   {
-    icon: "Mail",
+    icon: Mail,
     label: "Email",
     value: "gn.natalia19@gmail.com",
     href: "mailto:gn.natalia19@gmail.com",
   },
   {
-    icon: "Phone",
+    icon: Phone,
     label: "Phone",
     value: "+44 759-7616-164",
     href: "tel:+447597616164",
   },
   {
-    icon: "MapPin",
+    icon: MapPin,
     label: "Location",
     value: "Bristol, UK",
     href: "https://maps.app.goo.gl/M5rVCCviRGvieS8E8",

@@ -1,7 +1,8 @@
 import type { ComponentProps } from "react";
-import type { icons } from "lucide-react";
+
 import * as z from "zod/mini";
 import type { contactSchema } from "@/constants/schema";
+import type { LucideIcon } from "lucide-react";
 
 type Size = "default" | "sm" | "lg";
 
@@ -16,8 +17,7 @@ export type ImageSrc = {
   width: number;
 };
 
-export type IconName = keyof typeof icons;
-export type Link = { label: string; href: string; icon: IconName };
+export type Link = { label: string; href: string; icon: LucideIcon };
 export type LinkValue = Link & { value: string };
 
 export type ContactFields = z.infer<typeof contactSchema>;

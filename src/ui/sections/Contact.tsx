@@ -1,7 +1,6 @@
 "use client";
 
 import { Send } from "lucide-react";
-import * as Icons from "lucide-react";
 import { useActionState, startTransition, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import { flattenError } from "zod/mini";
@@ -244,30 +243,25 @@ export const Contact = () => {
                 Contact Information
               </h3>
               <div className="space-y-4">
-                {contactInfo.map((item, i) => {
-                  const Icon = Icons[
-                    item.icon as keyof typeof Icons
-                  ] as React.ElementType;
-                  return (
-                    <a
-                      key={i}
-                      target="_blank"
-                      rel="noreferrer"
-                      href={item.href}
-                      className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
-                    >
-                      <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <Icon className="size-5 text-primary" />
+                {contactInfo.map((item, i) => (
+                  <a
+                    key={i}
+                    target="_blank"
+                    rel="noreferrer"
+                    href={item.href}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                  >
+                    <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <item.icon className="size-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-muted-foreground">
+                        {item.label}
                       </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground">
-                          {item.label}
-                        </div>
-                        <div className="font-medium">{item.value}</div>
-                      </div>
-                    </a>
-                  );
-                })}
+                      <div className="font-medium">{item.value}</div>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
 

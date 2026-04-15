@@ -1,4 +1,3 @@
-import * as Icons from "lucide-react";
 import { socialLinks } from "@/constants";
 
 export const Footer = () => {
@@ -20,19 +19,16 @@ export const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
-            {socialLinks.map((social, indx) => {
-              const Icon = Icons[social.icon];
-              return (
-                <a
-                  key={indx}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
-                >
-                  <Icon className="size-5" />
-                </a>
-              );
-            })}
+            {socialLinks.map((social, indx) => (
+              <a
+                key={indx}
+                href={social.href}
+                aria-label={social.label}
+                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <social.icon className="size-5" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
