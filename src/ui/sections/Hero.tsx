@@ -78,7 +78,10 @@ function Hero() {
               </Button>
               <AnimatedBorderButton
                 onClick={() =>
-                  downloadFile("/cv/cv.pdf", "Nataliia_Hirniak_CV.pdf")
+                  downloadFile(
+                    "/cv/CV_Nataliia_Hirniak.pdf",
+                    "CV_Nataliia_Hirniak.pdf",
+                  )
                 }
               >
                 <Download className="size-5" />
