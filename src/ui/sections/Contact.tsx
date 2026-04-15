@@ -11,7 +11,7 @@ import { contactInfo, ISAVAILABLE } from "@/constants";
 import type { ActionState, FieldName } from "@/types";
 import { contactSchema } from "@/constants/schema";
 import { useFieldValidation } from "@/hooks/useFieldValidation";
-import { FieldError } from "../shared/FieldError";
+import FieldError from "../shared/FieldError";
 
 const initialState: ActionState = {
   errors: {},
@@ -63,7 +63,7 @@ async function sendMessageAction(
   };
 }
 
-export const Contact = () => {
+function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
   const { inlineErrors, validate, clearField, clearAll } =
@@ -284,4 +284,6 @@ export const Contact = () => {
       </div>
     </section>
   );
-};
+}
+
+export default Contact;

@@ -1,10 +1,4 @@
-export const FieldError = ({
-  id,
-  message,
-}: {
-  id: string;
-  message?: string;
-}) => {
+function FieldError({ id, message }: { id: string; message?: string }) {
   return (
     <p
       id={id}
@@ -15,6 +9,6 @@ export const FieldError = ({
       {message ?? " "}
     </p>
   );
-};
+}
 
 export default FieldError;

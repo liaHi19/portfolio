@@ -1,6 +1,6 @@
 import { socialLinks } from "@/constants";
 
-export const Footer = () => {
+function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -34,4 +34,6 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}
+
+export default Footer;

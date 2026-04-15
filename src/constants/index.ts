@@ -1,11 +1,49 @@
 import type { Link, LinkValue } from "@/types";
 
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import {
+  FileCode2,
+  Github,
+  HandshakeIcon,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Rocket,
+  ShieldCheck,
+} from "lucide-react";
 
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+];
+
+export const highlights = [
+  {
+    icon: FileCode2,
+    title: "Clean Code",
+    description:
+      "Writing readable, maintainable code with clear structure and long-term scalability in mind.",
+  },
+
+  {
+    icon: HandshakeIcon,
+    title: "Collaboration",
+    description:
+      "Partnering with designers, developers to turn ideas into polished products.",
+  },
+  {
+    icon: Rocket,
+    title: "Innovation",
+    description:
+      "Embracing modern tools and emerging best practices to build fast, future-ready solutions.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Reliability",
+    description:
+      "Writing tested, predictable code that holds up in production and is easy to debug.",
+  },
 ];
 
 export const skills = [
