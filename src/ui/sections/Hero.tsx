@@ -5,21 +5,12 @@ import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 import { heroImgSrc, skills, socialLinks } from "@/constants";
 import { buildSrcSet, downloadFile } from "@/libs/utils";
 
-const moveLeft = () => {
-  return Math.random() * 100;
-};
-
-const moveTop = () => {
-  return Math.random() * 100;
-};
-
-const slowDrift = () => {
-  return 15 + Math.random() * 20;
-};
-
-const delay = () => {
-  return Math.random() * 5;
-};
+const particles = Array.from({ length: 30 }, () => ({
+  left: Math.random() * 100,
+  top: Math.random() * 100,
+  delay: Math.random() * 5,
+  duration: 15 + Math.random() * 20,
+}));
 
 const heroSrcSet = buildSrcSet(heroImgSrc);
 
@@ -40,16 +31,16 @@ function Hero() {
       </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {particles.map((p, i) => (
           <div
             key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#8b5cf6",
-              left: `${moveLeft()}%`,
-              top: `${moveTop()}%`,
-              animation: `slow-drift ${slowDrift()}s ease-in-out infinite`,
-              animationDelay: `${delay()}s`,
+              left: `${p.left}%`,
+              top: `${p.top}%`,
+              animation: `slow-drift ${p.duration}s ease-in-out infinite`,
+              animationDelay: `${p.delay}s`,
             }}
           />
         ))}
