@@ -31,6 +31,7 @@ function Hero() {
           src="/hero/hero-bg.webp"
           srcSet={heroSrcSet}
           sizes="(min-width: 1880px) 100.18vw, (min-width: 1040px) 1777px, 2662px"
+          fetchPriority="high"
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -124,6 +125,8 @@ function Hero() {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/profile/profile.webp"
+                  width={480}
+                  height={600}
                   alt="Nataliia Hirniak"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
