@@ -99,6 +99,7 @@ function Hero() {
                     <a
                       href={social.href}
                       target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={social.label}
                     >
                       {<social.icon className="size-5" />}
