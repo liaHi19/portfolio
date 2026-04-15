@@ -54,38 +54,66 @@ function Projects() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60" />
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                    target="_blank"
-                    aria-label={project.labelLink}
-                  >
-                    <ArrowUpRight className="size-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                    target="_blank"
-                    aria-label={project.labelGithub}
-                  >
-                    <Github className="size-5" />
-                  </a>
-                </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={project.labelLink}
+                  className="absolute inset-0 z-10"
+                />
               </div>
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                <div className="flex gap-3 justify-end">
+                  <div className="relative group/link">
+                    <a
+                      href={project.link}
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-full glass text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.labelLink}
+                    >
+                      <ArrowUpRight className="size-4" />
+                      Live
+                    </a>
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 text-xs rounded-lg bg-card border border-border/50 text-muted-foreground opacity-0 group-hover/link:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-md">
+                      View live site
+                    </div>
+                  </div>
+                  <div className="relative group/link">
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-full glass text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.labelGithub}
+                    >
+                      <Github className="size-4" />
+                      Code
+                    </a>
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 text-xs rounded-lg bg-card border border-border/50 text-muted-foreground opacity-0 group-hover/link:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-md">
+                      View source code
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <h3 className="flex items-start justify-between text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
-                  </h3>
-                  <ArrowUpRight
-                    className="size-5 
+                    <ArrowUpRight
+                      className="size-5 
                   text-muted-foreground group-hover:text-primary
                    group-hover:translate-x-1 
                    group-hover:-translate-y-1 transition-all"
+                    />
+                  </h3>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={project.labelLink}
+                    className="absolute inset-0 z-10"
                   />
                 </div>
                 <p className="text-muted-foreground text-sm">
