@@ -97,7 +97,12 @@ export const contactInfo: LinkValue[] = [
     value: "gn.natalia19@gmail.com",
     href: "mailto:gn.natalia19@gmail.com",
   },
-
+  {
+    icon: "Phone",
+    label: "Phone",
+    value: "+44 759-7616-164",
+    href: "tel:+447597616164",
+  },
   {
     icon: "MapPin",
     label: "Location",
