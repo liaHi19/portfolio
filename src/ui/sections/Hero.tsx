@@ -1,9 +1,10 @@
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 
-import Button from "../shared/Button";
-import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 import { heroImgSrc, skills, socialLinks } from "@/constants";
 import { buildSrcSet, downloadFile } from "@/libs/utils";
+
+import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
+import Button from "../shared/Button";
 
 const particles = Array.from({ length: 30 }, () => ({
   left: Math.random() * 100,

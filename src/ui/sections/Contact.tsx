@@ -1,16 +1,18 @@
 "use client";
 
+import { startTransition, useActionState, useEffect, useRef } from "react";
+
 import { Send } from "lucide-react";
-import { useActionState, startTransition, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import { flattenError } from "zod/mini";
-
 import emailjs from "@emailjs/browser";
-import Button from "../shared/Button";
+
 import { contactInfo, ISAVAILABLE } from "@/constants";
-import type { ActionState, FieldName } from "@/types";
 import { contactSchema } from "@/constants/schema";
 import { useFieldValidation } from "@/hooks/useFieldValidation";
+import type { ActionState, FieldName } from "@/types";
+
+import Button from "../shared/Button";
 import FieldError from "../shared/FieldError";
 
 const initialState: ActionState = {

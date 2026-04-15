@@ -1,8 +1,8 @@
-import type { ComponentProps } from "react";
-
-import * as z from "zod/mini";
-import type { contactSchema } from "@/constants/schema";
 import type { LucideIcon } from "lucide-react";
+import type { ComponentProps } from "react";
+import * as z from "zod/mini";
+
+import type { contactSchema } from "@/constants/schema";
 
 type Size = "default" | "sm" | "lg";
 

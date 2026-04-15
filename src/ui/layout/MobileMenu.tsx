@@ -1,7 +1,7 @@
-import { navLinks } from "@/constants";
-
-import Button from "@/ui/shared/Button";
 import { Menu, X } from "lucide-react";
+
+import { navLinks } from "@/constants";
+import Button from "@/ui/shared/Button";
 
 function MobileMenu({
   isMobileMenuOpen,

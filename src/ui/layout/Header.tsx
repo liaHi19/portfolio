@@ -1,9 +1,10 @@
+import { useEffect, useState } from "react";
+
+import { navLinks } from "@/constants";
+import { cn } from "@/libs/utils";
 import Button from "@/ui/shared/Button";
 
 import MobileMenu from "./MobileMenu";
-import { navLinks } from "@/constants";
-import { useEffect, useState } from "react";
-import { cn } from "@/libs/utils";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

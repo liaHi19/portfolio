@@ -1,7 +1,10 @@
-import { projects } from "@/constants";
-import { ArrowUpRight, Github } from "lucide-react";
-import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 import { useState } from "react";
+
+import { ArrowUpRight, Github } from "lucide-react";
+
+import { projects } from "@/constants";
+
+import { AnimatedBorderButton } from "../shared/AnimatedBorderButton";
 
 const LIMIT = 4;
 

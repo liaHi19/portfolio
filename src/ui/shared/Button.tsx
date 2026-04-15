@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
 import type { ComponentPropsWithoutRef, ElementType } from "react";
+import { twMerge } from "tailwind-merge";
 
 type ButtonProps<T extends ElementType = "button"> = {
   as?: T;

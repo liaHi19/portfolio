@@ -1,8 +1,9 @@
+import { useRef, useState } from "react";
+
 import * as z from "zod/mini";
 
 import { contactSchema } from "@/constants/schema";
 import type { FieldName } from "@/types";
-import { useRef, useState } from "react";
 
 const FIELD_SCHEMAS: Record<FieldName, z.ZodMiniString> = {
   name: contactSchema.shape.name,

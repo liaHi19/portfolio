@@ -1,5 +1,3 @@
-import type { Link, LinkValue } from "@/types";
-
 import {
   FileCode2,
   Github,
@@ -11,6 +9,8 @@ import {
   Rocket,
   ShieldCheck,
 } from "lucide-react";
+
+import type { Link, LinkValue } from "@/types";
 
 export const navLinks = [
   { href: "#about", label: "About" },
