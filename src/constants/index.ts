@@ -71,7 +71,6 @@ export const skills = [
 export const projects = [
   {
     title: "E-commerce Shopping Platform",
-
     description:
       "A full-featured e-commerce platform with authentication, payments, admin tools, reviews, and email receipts.",
     image: "/projects/prostore.webp",
@@ -86,13 +85,36 @@ export const projects = [
       "PayPal",
       "Stripe",
       "Tailwind CSS",
-      "Shadcn UI",
+      "shadcn/ui",
       "Jest",
     ],
     link: "https://prostore-beta-five.vercel.app/",
     labelLink: "Visit Prostore Shopping Platform",
     github: "https://github.com/liaHi19/prostore",
     labelGithub: "Visit Project Prostore on Github",
+  },
+  {
+    title: "Polish Writing",
+    description:
+      "AI-powered writing assistant that rewrites and refines text across five modes — improve, email, LinkedIn, technical, and casual — with real-time streaming output, per-user history, and a daily usage quota.",
+    image: "/projects/polish-writing.webp",
+    imageSrc: [],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Anthropic API",
+      "Supabase",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Vercel AI SDK",
+      "React",
+      "Claude Code",
+      "Claude Design",
+    ],
+    link: "https://ai-writing-tool-pearl.vercel.app/",
+    labelLink: "Visit Polish Writing Tool",
+    github: "https://github.com/liaHi19/ai-writing-tool",
+    labelGithub: "Visit Project AI Polish Writing on Github",
   },
 ];
 
