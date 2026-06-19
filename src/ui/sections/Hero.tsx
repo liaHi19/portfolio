@@ -24,7 +24,6 @@ function Hero() {
           srcSet={heroSrcSet}
           sizes="(min-width: 1880px) 100.18vw, (min-width: 1040px) 1777px, 2662px"
           fetchPriority="high"
-          alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
 
